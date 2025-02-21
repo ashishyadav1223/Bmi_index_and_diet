@@ -1,0 +1,25 @@
+from tkinter import*
+root=Tk()
+root.title("ashish")
+root.geometry('400x500')
+root.configure(background="#000000")
+var_name=StringVar()
+label=Label(root,text="hi ashish",font="lucida 15 bold",bg="red",fg="blue")
+label.pack(side="top")
+def check():
+    l1=Label(root,text="it is submited",fg="red")
+    l1.pack()
+button=Button(root,text="submit",bg="yellow",command=check)
+button.pack(side="bottom")
+def submit2():
+    name=entry1.get()
+    la=Label(root,text="hi  "+name)
+    la.pack()
+l2=Label(root,text="enter your name",fg="yellow",bg="white",font="lucida 10 bold")
+l2.pack()
+entry1=Entry(root,textvariable=var_name)
+entry1.pack()
+button=Button(root,text="subit your name",command=submit2)
+button.pack()
+
+root.mainloop()
